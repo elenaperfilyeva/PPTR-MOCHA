@@ -1,0 +1,29 @@
+{
+  "name": "pptr-mocha",
+  "version": "1.0.0",
+  "description": "test framework with mocha steps and builder class pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --timeout=30000 --require mocha-steps ./build/tests/**.js",
+    "clean": "rmdir /s /q build",
+    "build": "babel --preset es2015 -d build/ src/"
+  },
+  "keywords": [
+    "mocha",
+    "puppeteer",
+    "framework"
+  ],
+  "author": "Elena Perfilyeva",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "mocha-steps": "^1.3.0",
+    "npm": "^8.5.0",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
